@@ -5,6 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class Character : MonoBehaviour
 {
+
+    public Animator myAnimator;
     Rigidbody myRig;
 
     GroundSensor groundSensor;
@@ -30,6 +32,16 @@ public class Character : MonoBehaviour
                 myRig.AddForce(transform.up * jumpForce);
             }
         }
+float multiplier;
+if(Input.GetKey(KeyCode.LeftShift))
+{
+multiplier = 1; 
+}
+else
+{
+    multiplier = 0.5f;
+}
+        myAnimator.SetFloat("vertical", Input.GetAxis("Vertical")* multiplier);
     }
 
     void FixedUpdate()
