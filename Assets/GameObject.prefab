@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5836096004155326116}
   - component: {fileID: 8761263519931735784}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Particle System Force Field
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1634721444124294057}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7270637383068794990}
@@ -40,16 +40,16 @@ ParticleSystemForceField:
   m_GameObject: {fileID: 1634721444124294057}
   m_Enabled: 1
   m_Parameters:
-    m_Shape: 0
+    m_Shape: 2
     m_StartRange: 0
-    m_EndRange: 1
+    m_EndRange: 6
     m_Length: 1
-    m_GravityFocus: 0
+    m_GravityFocus: 1
     m_RotationRandomness: {x: 0, y: 0}
     m_DirectionCurveX:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 56
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -155,7 +155,7 @@ ParticleSystemForceField:
     m_DirectionCurveZ:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 6
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -208,7 +208,7 @@ ParticleSystemForceField:
     m_GravityCurve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 65
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -261,7 +261,7 @@ ParticleSystemForceField:
     m_RotationSpeedCurve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 6
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -535,7 +535,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7270637383068794990}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: GameObject (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -549,15 +549,16 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2167515169742198858}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.53729963, y: 0, z: 0, w: 0.8433915}
+  m_LocalPosition: {x: 0, y: 65, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 6}
   m_Children:
   - {fileID: 5836096004155326116}
   - {fileID: 9145574036949414858}
+  - {fileID: 4791155048195977825}
   m_Father: {fileID: 8404068061616410942}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 65, y: 0, z: 0}
 --- !u!1 &3355023926192267031
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,7 +569,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9145574036949414858}
   - component: {fileID: 5638010076222560893}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Audio Source
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -583,7 +584,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3355023926192267031}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 60, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7270637383068794990}
@@ -713,7 +714,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7270637383068794990}
-  - {fileID: 4791155048195977825}
   - {fileID: 3612559629703450528}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -743,11 +743,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5152988151861374087}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 12, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8404068061616410942}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!328 &973721965058135444
 VideoPlayer:
@@ -767,7 +767,7 @@ VideoPlayer:
   m_TargetMaterialProperty: _MainTex
   m_RenderMode: 2
   m_AspectRatio: 2
-  m_DataSource: 0
+  m_DataSource: 1
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
   m_TargetAudioSources:
@@ -794,7 +794,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4791155048195977825}
   - component: {fileID: 7295425100638139647}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Directional Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -808,12 +808,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6611606298177713588}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 8404068061616410942}
-  m_RootOrder: 1
+  m_Father: {fileID: 7270637383068794990}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!108 &7295425100638139647
 Light:
@@ -824,7 +824,7 @@ Light:
   m_GameObject: {fileID: 6611606298177713588}
   m_Enabled: 1
   serializedVersion: 10
-  m_Type: 1
+  m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
