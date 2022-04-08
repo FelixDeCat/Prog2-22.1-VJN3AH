@@ -32,16 +32,9 @@ public class Character : MonoBehaviour
                 myRig.AddForce(transform.up * jumpForce);
             }
         }
-float multiplier;
-if(Input.GetKey(KeyCode.LeftShift))
-{
-multiplier = 1; 
-}
-else
-{
-    multiplier = 0.5f;
-}
-        myAnimator.SetFloat("vertical", Input.GetAxis("Vertical")* multiplier);
+
+        myAnimator.SetFloat("vertical", Input.GetAxis("Vertical"));
+        myAnimator.SetFloat("horizontal", Input.GetAxis("Horizontal"));
     }
 
     void FixedUpdate()
