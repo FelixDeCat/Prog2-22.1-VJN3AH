@@ -1,5 +1,50 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2741852957726940096
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8670193434842708365}
+  - component: {fileID: 6405065604017612935}
+  m_Layer: 0
+  m_Name: CompShooter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8670193434842708365
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2741852957726940096}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5719563709288602733}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6405065604017612935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2741852957726940096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 288c4f7d464463f4aae54e4b977521e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootpoint: {fileID: 6474754928653985705}
+  model_pojectile: {fileID: 8071602223308018563, guid: 6f27dcd6e8634464db55c209cd9166af, type: 3}
 --- !u!1 &5719563708510184994
 GameObject:
   m_ObjectHideFlags: 0
@@ -56,13 +101,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5719563708865611509}
-  m_LocalRotation: {x: 0.099989325, y: -0, z: -0, w: 0.99498856}
-  m_LocalPosition: {x: 0, y: 2.69, z: -5.64}
+  m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
+  m_LocalPosition: {x: 0, y: 7.52, z: -6.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5719563709288602733}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 11.477, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
 --- !u!20 &5719563708865611511
 Camera:
   m_ObjectHideFlags: 0
@@ -147,6 +192,7 @@ Transform:
   - {fileID: 5719563709301546735}
   - {fileID: 5719563708510184995}
   - {fileID: 5719563708865611504}
+  - {fileID: 8670193434842708365}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -180,6 +226,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myAnimator: {fileID: 7086142892437077953}
   parent_Components: {fileID: 5719563708510184995}
+  offensiveComponent: {fileID: 6405065604017612935}
   speed: 200
   jumpForce: 200
 --- !u!136 &5719563709288602722
@@ -205,6 +252,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5719563709301546735}
+  - component: {fileID: 1110229811878295874}
   m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
@@ -227,6 +275,19 @@ Transform:
   m_Father: {fileID: 5719563709288602733}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1110229811878295874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5719563709301546734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0858fe44c43d9d444ba5d64cdf487998, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotator: {fileID: 5719563709301546735}
 --- !u!1 &5719563709710795568
 GameObject:
   m_ObjectHideFlags: 0
@@ -275,6 +336,36 @@ MonoBehaviour:
     m_Bits: 64
   radius: 0.1
   IsGrounded: 0
+--- !u!1 &8789595799624904711
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6474754928653985705}
+  m_Layer: 0
+  m_Name: shootpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6474754928653985705
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8789595799624904711}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.04, y: 1.41, z: 0.83}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3798546309458372027}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &3692279632198779472
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -336,13 +427,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 1e15cf5814f6ec0428701c8d0054ce3f, type: 2}
     - target: {fileID: 5866666021909216657, guid: fc71820913ab7424386567d037a5ae7d, type: 3}
       propertyPath: m_WarningMessage
-      value: "\nBinding warning: Some generic clip(s) animate transforms that are
-        already bound by a Humanoid avatar. These transforms can only be changed
-        by Humanoid clips.\n\tTransform 'boss:Hips'\n\tTransform 'boss:RightForeArm'\n\tTransform
-        'boss:RightLeg'\n\tTransform 'boss:LeftUpLeg'\n\tTransform 'boss:Spine2'\n\tTransform
-        'boss:Neck'\n\tTransform 'boss:RightToeBase'\n\tTransform 'boss:Neck1'\n\tTransform
-        'boss:LeftLeg'\n\tTransform 'boss:LeftHand'\n\tand more ...\n\tFrom animation
-        clip 'boss_forward'"
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: fc71820913ab7424386567d037a5ae7d, type: 3}
       propertyPath: m_ApplyRootMotion
@@ -350,6 +435,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc71820913ab7424386567d037a5ae7d, type: 3}
+--- !u!1 &4610829579208326913 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: fc71820913ab7424386567d037a5ae7d, type: 3}
+  m_PrefabInstance: {fileID: 3692279632198779472}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3798546309458372027 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: fc71820913ab7424386567d037a5ae7d, type: 3}
@@ -360,3 +450,16 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: fc71820913ab7424386567d037a5ae7d, type: 3}
   m_PrefabInstance: {fileID: 3692279632198779472}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7910961840008263132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4610829579208326913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d267f1862e4fc438dbf8c47e9331d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myCharacter: {fileID: 5719563709288602723}

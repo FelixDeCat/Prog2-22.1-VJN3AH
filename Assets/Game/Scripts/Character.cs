@@ -12,6 +12,10 @@ public class Character : MonoBehaviour
     GroundSensor groundSensor;
     [SerializeField] Transform parent_Components;
 
+    [SerializeField] WeaponBase offensiveComponent;
+
+    Transform rotator;
+
     [Range(0,5000)]
     [SerializeField] float speed = 200;
 
@@ -35,6 +39,19 @@ public class Character : MonoBehaviour
 
         myAnimator.SetFloat("vertical", Input.GetAxis("Vertical"));
         myAnimator.SetFloat("horizontal", Input.GetAxis("Horizontal"));
+
+
+        if (Input.GetButtonDown("Fire1"))
+        {
+            myAnimator.SetBool("IsShooting", true);
+            
+        }
+    }
+
+    public void ANIMEVENT_Shoot()
+    {
+        myAnimator.SetBool("IsShooting", false);
+        offensiveComponent.ExecuteAttack();
     }
 
     void FixedUpdate()
