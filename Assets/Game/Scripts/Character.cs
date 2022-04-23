@@ -21,6 +21,15 @@ public class Character : MonoBehaviour
 
     [SerializeField] float jumpForce = 5;
 
+
+    public Vector3 Position
+    {
+        get
+        {
+            return this.transform.position;
+        }
+    }
+
     void Start()
     {
         myRig = GetComponent<Rigidbody>();
