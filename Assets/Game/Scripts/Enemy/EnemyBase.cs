@@ -7,6 +7,9 @@ public class EnemyBase : MonoBehaviour
     public Waypoint[] myWaypoints;
     Waypoint current;
 
+    [Range(1,10)]
+    public float speedrotation = 3;
+
     float timer = 0;
     [SerializeField] float time_to_movement = 3f;
     bool anim;
@@ -32,6 +35,10 @@ public class EnemyBase : MonoBehaviour
     void Lerp(float val)
     {
         transform.position = Vector3.Lerp(current.transform.position, current.next.transform.position, val);
+        Vector3 dir = current.next.transform.position - current.transform.position;
+        //transform.forward = dir;
+        transform.forward = Vector3.Slerp(this.transform.forward, dir, Time.deltaTime * speedrotation);
+
     }
 
     private void Update()
